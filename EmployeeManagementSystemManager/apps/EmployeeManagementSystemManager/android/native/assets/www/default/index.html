@@ -1,0 +1,78 @@
+<!DOCTYPE HTML><html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Manager mobile application</title>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+        <link href="worklight/worklight.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <script>
+		// Define WL namespace.
+		var WL = WL ? WL : {};
+		/**
+		 * WLClient configuration variables.
+		 * Values are injected by the deployer that packs the gadget.
+		 */
+		 WL.StaticAppProps = {
+   "APP_DISPLAY_NAME": "EmployeeManagementSystemManager",
+   "APP_ID": "EmployeeManagementSystemManager",
+   "APP_SERVICES_URL": "\/apps\/services\/",
+   "APP_VERSION": "1.0",
+   "ENVIRONMENT": "android",
+   "LOGIN_DISPLAY_TYPE": "embedded",
+   "WORKLIGHT_NATIVE_VERSION": "188543705",
+   "WORKLIGHT_PLATFORM_VERSION": "7.1.0.0",
+   "WORKLIGHT_ROOT_URL": "\/apps\/services\/api\/EmployeeManagementSystemManager\/android\/"
+};
+</script>
+		<script src="worklight/cordova.js"></script>
+		<script src="worklight/wljq.js"></script>
+		<script src="worklight/worklight.js"></script>
+		<script src="worklight/checksum.js"></script>
+		<script>
+	window.$ = window.jQuery = WLJQ;
+</script>
+        <style type="text/css">
+table.altrowstable {
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	border-width: 1px;
+	border-color: #a9c6c9;
+	border-collapse: collapse;
+}
+table.altrowstable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+	color: white;
+}
+table.altrowstable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+.oddrowcolor {
+	background-color: #d4e3e5;
+}
+.evenrowcolor {
+	background-color: #c3dde0;
+}
+.headerrowcolor {
+	background-color: black;
+}
+</style>
+    </head>
+    <body style="display: none; font-size: 12px;">
+        <div id="header">
+            <div id="ReloadButton" onclick="reload();"></div>
+            <h1>Manager mobile application</h1>
+        </div>
+        <div class="wrapper" id="list_of_employee"></div>
+        <div class="wrapper" id="details_of_employee"></div>
+        <script src="js/initOptions.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/messages.js"></script>
+    </body>
+</html>
