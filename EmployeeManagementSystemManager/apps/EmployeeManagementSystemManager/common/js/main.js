@@ -23,10 +23,10 @@ function displayEmployeePendingSuccess(result) {
 	viewLists();
 
 	var rows = result.responseJSON.rows;
-	
+
 	var table = createTable(rows);
 	$('#list_of_employee').html(table);
-	
+
 	altRows('alternatecolor', true);
 }
 
@@ -65,18 +65,22 @@ function altRows(id, hasHeader) {
 function createTable(rows) {
 	var table = '<table class="altrowstable" id="alternatecolor" style="width: 100%;">';
 	table = table
-			+ '<tr><th>Employee Id</th><th>Employee Name</th><th>Status</th><th>Actions</th></tr>';
+			+ '<tr><th>No.</th><th>Employee Id</th><th>Employee Name</th><th>Status</th><th>Actions</th></tr>';
+
+	var stt = 1;
 	rows
 			.forEach(function(row) {
 				var data = row.key;
 				table = table
 						+ '<tr><td>'
+						+ stt++
+						+ '</td><td>'
 						+ data.employee_id
 						+ '</td><td>'
 						+ data.employee_name
 						+ '</td><td>'
 						+ data.status
-						+ '</td><td><input type="button" value="Details" onclick="details(\''
+						+ '</td><td><input type="button" value="Details" class="btn-add" onclick="details(\''
 						+ data.employee_id + '\')"/></td></tr>';
 			});
 	table = table + '</table>';
