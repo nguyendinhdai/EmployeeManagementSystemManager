@@ -23,8 +23,10 @@ function displayEmployeePendingSuccess(result) {
 	viewLists();
 
 	var rows = result.responseJSON.rows;
+	
 	var table = createTable(rows);
 	$('#list_of_employee').html(table);
+	
 	altRows('alternatecolor', true);
 }
 
